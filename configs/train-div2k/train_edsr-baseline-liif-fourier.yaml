@@ -46,6 +46,7 @@ model:
       args:
         out_dim: 3
         hidden_list: [256, 256, 256, 256]
+    fourier_encoding: true
 
 optimizer:
   name: adam

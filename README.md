@@ -79,3 +79,5 @@ python demo.py --input xxx.png --model [MODEL_PATH] --resolution [HEIGHT],[WIDTH
 **Train**: `python train_liif.py --config configs/train-celebAHQ/[CONFIG_NAME].yaml`.
 
 **Test**: `python test.py --config configs/test/test-celebAHQ-32-256.yaml --model [MODEL_PATH]` (or `test-celebAHQ-64-128.yaml` for another task). We use `epoch-best.pth` in corresponding save folder.
+
+python train_liif.py --config configs/train-div2k/train_edsr-baseline-liif.yaml --gpu 3
