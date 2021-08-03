@@ -87,7 +87,7 @@ class LIIF(nn.Module):
                 rel_coord[:, :, 0] *= feat.shape[-2]
                 rel_coord[:, :, 1] *= feat.shape[-1]
                 if self.fourier_encoding:
-                    rel_coord = self.fourier_encoder(rel_coord)
+                    rel_coord = self.fourier_encoder(rel_coord)   # 加一层fourier
                 inp = torch.cat([q_feat, rel_coord], dim=-1)
 
                 if self.cell_decode:
@@ -120,7 +120,7 @@ class LIIF(nn.Module):
 class FourierEncoder(nn.Module):
     def __init__(self, length):
         super().__init__()
-        print('好耶！')
+        # print('好耶！')
         self.length = length
         self.weights = nn.ParameterList()
         for i in range(length // 4):
